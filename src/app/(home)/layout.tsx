@@ -22,35 +22,35 @@ import TaskIcon from "@/components/icons/TaskIcon";
 import SearchIcon from "@/components/icons/SearchIcon";
 import SettingNavIcon from "@/components/icons/SettingNavIcon";
 import BellNotificationIcon from "@/components/icons/BellNotificationIcon";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import PageBody from "@/components/PageBody";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
-  { name: "Transactions", href: "/#", icon: TransactionIcon, current: false },
-  { name: "Accounts", href: "/#", icon: AccountsIcon, current: false },
+  { name: "Dashboard", href: "/", icon: HomeIcon },
+  { name: "Transactions", href: "/#", icon: TransactionIcon },
+  { name: "Accounts", href: "/#", icon: AccountsIcon },
   {
     name: "Investments",
     href: "/#",
     icon: InvestmentIcon,
-    current: false,
   },
   {
     name: "Credit Cards",
     href: "#",
     icon: CreditCardIcon,
-    current: false,
   },
-  { name: "Loans", href: "#", icon: LoanIcon, current: false },
-  { name: "Services", href: "#", icon: ServiceIcon, current: false },
-  { name: "My Privileges", href: "#", icon: MyPrivilegesIcon, current: false },
-  { name: "Setting", href: "/setting", icon: SettingIcon, current: false },
+  { name: "Loans", href: "#", icon: LoanIcon },
+  { name: "Services", href: "#", icon: ServiceIcon },
+  { name: "My Privileges", href: "#", icon: MyPrivilegesIcon },
+  { name: "Setting", href: "/setting", icon: SettingIcon },
 ];
 
 export default function DashboardLayout(props: Props) {
+  const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -100,7 +100,7 @@ export default function DashboardLayout(props: Props) {
                             <a
                               href={item.href}
                               className={classNames(
-                                item.current
+                                item.href === pathname
                                   ? "bg-gray-50 text-[#232323]"
                                   : "text-[#B1B1B1] hover:bg-gray-50 hover:text-[#7e7c7c]",
                                 "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
@@ -111,7 +111,7 @@ export default function DashboardLayout(props: Props) {
                                 <item.icon
                                   aria-hidden="true"
                                   className={classNames(
-                                    item.current
+                                    item.href === pathname
                                       ? "text-indigo-600"
                                       : "text-gray-400 group-hover:text-indigo-600",
                                     "size-6 shrink-0"
@@ -153,7 +153,7 @@ export default function DashboardLayout(props: Props) {
                         <a
                           href={item.href}
                           className={classNames(
-                            item.current
+                            item.href === pathname
                               ? "bg-gray-50 text-[#232323]"
                               : "text-[#B1B1B1] hover:bg-gray-50 hover:text-[#7e7c7c]",
                             "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
@@ -164,7 +164,7 @@ export default function DashboardLayout(props: Props) {
                             <item.icon
                               aria-hidden="true"
                               className={classNames(
-                                item.current
+                                item.href === pathname
                                   ? "text-indigo-600"
                                   : "text-gray-400 group-hover:text-indigo-600",
                                 "size-6 shrink-0"
@@ -184,7 +184,7 @@ export default function DashboardLayout(props: Props) {
 
         <div className="lg:pl-72">
           <div className="sticky top-0 z-40">
-            <div className="mb-[20px] md:mb-[0px]">
+            <div className="">
               <div className="flex h-16 items-center gap-x-4 bg-white px-4 sm:gap-x-6 sm:px-6 lg:px-0">
                 <button
                   type="button"
@@ -196,11 +196,11 @@ export default function DashboardLayout(props: Props) {
                 </button>
 
                 <div className="w-full flex items-center justify-between">
-                  <h1 className="lg:pl-8 md:w-[70%] w-[90%] md:text-start text-center font-[600] text-[28px] leading-[33.89px] text-[#343C6A]">
+                  <h1 className="lg:pl-6 md:w-[70%] w-[90%] md:text-start text-center font-[600] text-[28px] leading-[33.89px] text-[#343C6A]">
                     Overview
                   </h1>
 
-                  <div className="flex justify-center items-center gap-[30px] lg:pr-8">
+                  <div className="flex justify-center items-center gap-[30px] lg:pr-6">
                     <div className="sm:flex hidden">
                       <div className="bg-[#F5F7FA] rounded-full md:flex px-4 py-3 overflow-hidden max-w-[255px] mx-auto font-[sans-serif] hidden">
                         <SearchIcon className="fill-gray-600 mr-3" />
@@ -228,8 +228,18 @@ export default function DashboardLayout(props: Props) {
                   </div>
                 </div>
               </div>
+              {/* <div className="border flex bg-[#F5F7FA] rounded-full px-4 py-3 overflow-hidden max-w-[255px] mx-auto font-[sans-serif] md:hidden">
+                <SearchIcon className="fill-gray-600 mr-3" />
+                <input
+                  type="email"
+                  placeholder="Search for something"
+                  className="w-full outline-none bg-[#F5F7FA] ml-3 font-[400] text-[15px] leading-[18px] text=[#8BA3CB]"
+                />
+              </div> */}
+            </div>
 
-              <div className="flex bg-[#F5F7FA] rounded-full px-4 py-3 overflow-hidden max-w-[255px] mx-auto font-[sans-serif] md:hidden">
+            <div className="w-full bg-[#FFFFFF] p-[20px] md:p-[0px]">
+              <div className="border flex bg-[#F5F7FA] rounded-full px-4 py-3 overflow-hidden  font-[sans-serif] md:hidden">
                 <SearchIcon className="fill-gray-600 mr-3" />
                 <input
                   type="email"
@@ -240,8 +250,11 @@ export default function DashboardLayout(props: Props) {
             </div>
           </div>
 
-          <main className="pt-[24px] px-[40px] pb-[40px]">
+          {/* <main className="pt-[24px] px-[40px] pb-[40px]">
             <div className=" px-2 sm:px-2 lg:px-2">{props.children}</div>
+          </main> */}
+          <main className="">
+            <PageBody>{props.children}</PageBody>
           </main>
         </div>
       </div>
