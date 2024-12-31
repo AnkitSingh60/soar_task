@@ -1,3 +1,10 @@
+import Cards from "@/components/dashboard/card/Cards";
+import PageBody from "@/components/PageBody";
+
 export default function HomePage() {
-  return <div className="bg-gray-900 py-24 sm:py-32">Home page</div>;
+  return (
+    <>
+      <Cards />
+    </>
+  );
 }
