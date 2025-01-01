@@ -1,6 +1,8 @@
 import DepositCardIcon from "@/components/icons/DepositCardIcon";
+import DollorIcon from "@/components/icons/DollorIcon";
 import MasterCardShadowIcon from "@/components/icons/MasterCardShadowIcon";
 import MasterCardShadowWhiteIcon from "@/components/icons/MasterCardShadowWhiteIcon";
+import PaypalIcon from "@/components/icons/PaypalIcon";
 import SettingNavIcon from "@/components/icons/SettingNavIcon";
 
 export default function Cards() {
@@ -130,7 +132,7 @@ export default function Cards() {
         <div className="flex gap-[30px] pb-[36px] overflow-x-scroll md:overflow-hidden">
           <div className="mt-[20px]">
             <div className="m-auto w-[400px] h-[230px] rounded-xl bg-[#FFFFFF] from-[#5B5A6F] to-[#000000] shadow-md transition-transform sm:hover:scale-90">
-              <div className="w-full flex items-center gap-[17px] pt-[15px] px-6">
+              <div className="w-full flex items-center gap-[17px] pt-[25px] px-6">
                 <div className="flex items-center justify-center bg-[#FFF5D9] rounded-full w-[50px] h-[50px]">
                   <DepositCardIcon className="h-[25px] w-[25px]" />
                 </div>
@@ -148,8 +150,8 @@ export default function Cards() {
               </div>
 
               <div className="w-full flex items-center gap-[17px] mt-[15px] px-6">
-                <div className="flex items-center justify-center bg-[#FFF5D9] rounded-full w-[50px] h-[50px]">
-                  <DepositCardIcon className="h-[25px] w-[25px]" />
+                <div className="flex items-center justify-center bg-[#E7EDFF] rounded-full w-[50px] h-[50px]">
+                  <PaypalIcon className="h-[25px] w-[25px]" />
                 </div>
                 <div>
                   <p className="w-[180px] font-[500] text-[16px] leading-[19.3px] text-[#232323]">
@@ -165,8 +167,8 @@ export default function Cards() {
               </div>
 
               <div className="w-full flex items-center gap-[17px] mt-[15px] px-6">
-                <div className="flex items-center justify-center bg-[#FFF5D9] rounded-full w-[50px] h-[50px]">
-                  <DepositCardIcon className="h-[25px] w-[25px]" />
+                <div className="flex items-center justify-center bg-[#DCFAF8] rounded-full w-[50px] h-[50px]">
+                  <DollorIcon className="h-[25px] w-[25px]" />
                 </div>
                 <div>
                   <p className="w-[180px] font-[500] text-[16px] leading-[19.3px] text-[#232323]">
