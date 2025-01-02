@@ -8,7 +8,6 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import FormInputField from "@/components/FormInputField";
-import FormSelectField from "@/components/FormSelectField";
 import PencilIcon from "@/components/icons/PencilIcon";
 import ToastContainer from "@/components/ToastContainer";
 import toast from "react-hot-toast";
