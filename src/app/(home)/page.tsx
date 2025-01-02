@@ -6,6 +6,7 @@ import MasterCardShadowIcon from "@/components/icons/MasterCardShadowIcon";
 import MasterCardShadowWhiteIcon from "@/components/icons/MasterCardShadowWhiteIcon";
 import PaypalIcon from "@/components/icons/PaypalIcon";
 import SendPlaneIcon from "@/components/icons/SendPlaneIcon";
+import Link from "next/link";
 
 import {
   BarChart,
@@ -107,18 +108,18 @@ export default function HomePage() {
   return (
     <>
       <div>
-        <div className="flex gap-[30px] overflow-x-scroll md:overflow-hidden pr-[24px]">
+        <div className="sm:flex gap-[30px] overflow-x-scroll md:overflow-hidden pr-[24px]">
           <div className="">
-            <div className="flex items-center sm:justify-between gap-[260px] space-x-4">
-              <h2 className="font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
+            <div className="flex items-center sm:justify-between space-x-4">
+              <h2 className="w-[300px] font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
                 My Cards
               </h2>
-              <a
+              <Link
                 href="#"
                 className="font-[600] text-[17px] leading-[20.57px] text-[#343C6A] hover:text-[#5d6cbe]"
               >
                 See All
-              </a>
+              </Link>
             </div>
             <div className="flex gap-[30px] pb-[36px] overflow-x-scroll md:overflow-hidden">
               <div className="mt-[20px]">
@@ -223,7 +224,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="">
+          <div className="sm:mt-[0px] mt-[24px]">
             <div className="flex items-center justify-between space-x-4">
               <h2 className="font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
                 Recent Transaction
@@ -288,13 +289,13 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex gap-[30px] pr-[24px]">
-          <div className="">
+        <div className="sm:flex gap-[30px] pr-[24px]">
+          <div className="sm:mt-[0px] mt-[24px]">
             <h2 className="font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
               Weekly Activity
             </h2>
 
-            <div className="w-[830px] mt-[20px] rounded-xl bg-[#FFFFFF] shadow">
+            <div className="sm:w-[830px] mt-[20px] rounded-xl bg-[#FFFFFF] shadow">
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart
                   data={weeklyActivityData}
@@ -325,7 +326,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="">
+          <div className="sm:mt-[0px] mt-[24px]">
             <h2 className="font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
               Expense Statistics
             </h2>
@@ -356,7 +357,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex gap-[30px] pr-[24px] mt-[24px]">
+        <div className="flex gap-[30px] pr-[24px] sm:mt-[0px] mt-[24px]">
           <div className="">
             <h2 className="font-[600] text-[22px] leading-[26.63px] text-[#343C6A]">
               Quick Transfer

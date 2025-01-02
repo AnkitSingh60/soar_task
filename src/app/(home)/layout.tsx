@@ -24,6 +24,7 @@ import SettingNavIcon from "@/components/icons/SettingNavIcon";
 import BellNotificationIcon from "@/components/icons/BellNotificationIcon";
 import { usePathname, useRouter } from "next/navigation";
 import PageBody from "@/components/PageBody";
+import Link from "next/link";
 
 type Props = {
   children: React.ReactNode;
@@ -150,7 +151,7 @@ export default function DashboardLayout(props: Props) {
                   <ul role="list" className="-mx-2 space-y-[16px]">
                     {navigation.map((item) => (
                       <li key={item.name}>
-                        <a
+                        <Link
                           href={item.href}
                           className={classNames(
                             item.href === pathname
@@ -172,7 +173,7 @@ export default function DashboardLayout(props: Props) {
                             />
                             {item.name}
                           </div>
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
