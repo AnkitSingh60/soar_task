@@ -25,6 +25,7 @@ import BellNotificationIcon from "@/components/icons/BellNotificationIcon";
 import { usePathname, useRouter } from "next/navigation";
 import PageBody from "@/components/PageBody";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   children: React.ReactNode;
@@ -135,8 +136,8 @@ export default function DashboardLayout(props: Props) {
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
-              <div className="flex gap-[10px] justify-center items-center">
-                <div onCanPlay={() => router.push("/")}>
+              <div className="flex gap-[10px] justify-center items-center cursor-pointer"  onClick={() => router.push("/")}>
+                <div>
                   {" "}
                   <TaskIcon className="h-8 w-auto" />
                 </div>
@@ -220,23 +221,17 @@ export default function DashboardLayout(props: Props) {
                       <BellNotificationIcon className="h-[25px] w-[25px]" />
                     </div>
                     <div className="flex items-center justify-center bg-[#F5F7FA] rounded-full w-[50px] h-[50px] overflow-hidden cursor-pointer">
-                      <img
-                        alt=""
-                        src="https://s3-alpha-sig.figma.com/img/57d3/d250/790e98129931897251abd3915a931233?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RK-a81-hCMGTpug0VYsNXtLWQfTk38o1Nhj2FiCFyZw~Bo~fWbmMLs4vIvwb4VIOe3xjWW2~v7kx4XDmrXHcMc~dIPAa5FWnX4vQwZvuAygn1hHMIbXR6Yeho-XkRjP8w5tQt~uFqAxOlFMNKJ5G3IWDniIuqEGAfPHNSW2noK1E6zunHRsG~KknQUE4RIa0Uqp1Tf2p05Qu7uqAP~il3qr9XrmWAMxvtzUvZF1AatjV3X-yptDS422qlwDOtaiR-zuS8H5X3i-8tsXGAr1h9hzo~LsrHuDKyiBqW2LLHP9qs~hnMBCv11TAfxijPSe26jHhVCD53m4bwH0VNbGdaw__"
+                      <Image
+                        src="/profile_pic.jpg"
                         className="h-[50px] w-[60px]"
+                        width={500}
+                        height={500}
+                        alt="img"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              {/* <div className="border flex bg-[#F5F7FA] rounded-full px-4 py-3 overflow-hidden max-w-[255px] mx-auto font-[sans-serif] md:hidden">
-                <SearchIcon className="fill-gray-600 mr-3" />
-                <input
-                  type="email"
-                  placeholder="Search for something"
-                  className="w-full outline-none bg-[#F5F7FA] ml-3 font-[400] text-[15px] leading-[18px] text=[#8BA3CB]"
-                />
-              </div> */}
             </div>
 
             <div className="w-full bg-[#FFFFFF] p-[20px] md:p-[0px]">
@@ -251,9 +246,6 @@ export default function DashboardLayout(props: Props) {
             </div>
           </div>
 
-          {/* <main className="pt-[24px] px-[40px] pb-[40px]">
-            <div className=" px-2 sm:px-2 lg:px-2">{props.children}</div>
-          </main> */}
           <main className="">
             <PageBody>{props.children}</PageBody>
           </main>

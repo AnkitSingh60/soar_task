@@ -11,6 +11,7 @@ import FormInputField from "@/components/FormInputField";
 import PencilIcon from "@/components/icons/PencilIcon";
 import ToastContainer from "@/components/ToastContainer";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 const tabs = [
   { name: "Edit Profile", index: 0 },
@@ -56,13 +57,6 @@ const SettingPage = () => {
       toast.success("Profile data updated successfully");
       reset();
     }
-    // alert(
-    //   "Name: " +
-    //     data.name +
-    //     " User Name: " +
-    //     data.username +
-    //     " etc fields were added successfully."
-    // );
   };
 
   return (
@@ -102,9 +96,11 @@ const SettingPage = () => {
                     <div className="">
                       <div className="flex justify-center items-center">
                         <div className="relative">
-                          <img
+                          <Image
+                            src="/profile_pic.jpg"
                             className="w-[98px] h-[98px] rounded-full mt-[22px] sm:mt-[0px]"
-                            src="https://s3-alpha-sig.figma.com/img/57d3/d250/790e98129931897251abd3915a931233?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RK-a81-hCMGTpug0VYsNXtLWQfTk38o1Nhj2FiCFyZw~Bo~fWbmMLs4vIvwb4VIOe3xjWW2~v7kx4XDmrXHcMc~dIPAa5FWnX4vQwZvuAygn1hHMIbXR6Yeho-XkRjP8w5tQt~uFqAxOlFMNKJ5G3IWDniIuqEGAfPHNSW2noK1E6zunHRsG~KknQUE4RIa0Uqp1Tf2p05Qu7uqAP~il3qr9XrmWAMxvtzUvZF1AatjV3X-yptDS422qlwDOtaiR-zuS8H5X3i-8tsXGAr1h9hzo~LsrHuDKyiBqW2LLHP9qs~hnMBCv11TAfxijPSe26jHhVCD53m4bwH0VNbGdaw__"
+                            width={500}
+                            height={500}
                             alt="img"
                           />
                           <div className="flex justify-center items-center bottom-0 left-[70px] absolute  w-[30px] h-[30px] bg-[#232323] border-2 border-white dark:border-gray-800 rounded-full cursor-pointer">
@@ -388,11 +384,11 @@ const SettingPage = () => {
 
             <TabPanel className="h-full">
               {" "}
-              <TabPanelTransition>Tab 2</TabPanelTransition>
+              <TabPanelTransition>Preferences Tab</TabPanelTransition>
             </TabPanel>
             <TabPanel className="h-full">
               {" "}
-              <TabPanelTransition>Tab 3</TabPanelTransition>
+              <TabPanelTransition>Security Tab</TabPanelTransition>
             </TabPanel>
           </TabPanels>
         </TabGroup>

@@ -6,6 +6,7 @@ import MasterCardShadowIcon from "@/components/icons/MasterCardShadowIcon";
 import MasterCardShadowWhiteIcon from "@/components/icons/MasterCardShadowWhiteIcon";
 import PaypalIcon from "@/components/icons/PaypalIcon";
 import SendPlaneIcon from "@/components/icons/SendPlaneIcon";
+import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -134,9 +135,13 @@ export default function HomePage() {
                           $5,756
                         </p>
                       </div>
-                      <img
+
+                      <Image
+                        src="/chip_black.png"
                         className="h-14 w-14 object-contain"
-                        src="https://s3-alpha-sig.figma.com/img/6f2e/6ae8/177a4ce3a2803414348e09c79e61df4f?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gwsJxtAi3~CqzatJNjVfjPoLSwHcWqmx6zJBwObXw70PQ0LbOANJ~xAloULbBDREzmQEDlSiQZSFp2rYxu77Hc1quVlQVgmdUmKflqckuRXXKyOWdQURVwwq9TTuR2FxnQaPxmaUJS4srHTIWlD4~m9MliW8pto73Vy2-2OEyjCXOEwdE-TVsY6XRTkaVoLbxfD8QhN5ZT5xCWJxwCYDYrCV1A1U4ngEBonNia6Npy6-ZWnShLS9rWD29HV4-xmcUxyjjru5yO1SjVj4jyYwmDKkjvcZMmAFN3thFDKEgvi5GYHchMmFDxEGwiUqxUZ07cWfmirmk~U28lPB6DVGng__"
+                        width={500}
+                        height={500}
+                        alt="img"
                       />
                     </div>
 
@@ -184,10 +189,12 @@ export default function HomePage() {
                         </p>
                       </div>
 
-                      <img
-                        alt="chip"
+                      <Image
                         src="/chip_card_black.png"
                         className="h-14 w-14 object-contain"
+                        width={500}
+                        height={500}
+                        alt="img"
                       />
                     </div>
 
@@ -366,24 +373,28 @@ export default function HomePage() {
             <div className="w-[445px] mt-[20px] rounded-xl bg-[#FFFFFF] shadow">
               <div className="flex gap-[28px] items-center px-6 py-8">
                 <div className="">
-                  <img
-                    alt="img"
-                    src="https://s3-alpha-sig.figma.com/img/a0bd/5a15/758288ff5165913073569be101d5c4fb?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JO0sI4lBcbNUVsmfcEsAocDi8I6t824a6WzR7Nv1JzjjK5Ls6AeaGUuPAZ2t5M7qFOPEWwNXJ5vA2jz7kFQH48Cb3uWjQZmcb5uKdP1w3ZnD4vyo1WVCykWD1EXE1tkpbpjHtPS~0LRmiULJ4ZWHg18xgGif6mT7rJq2GaAedu81YwZko6rVNrsnWCl28HwtTO76pB6e7-8vy8f0jhI2gAApEVnqCkTEg-ppl6Uku5G6Ze0MO7a4QgAwwJivse-Dqh1zfIXTeLxplpnQPB7A-R4xwLITLsFEY34786LgMFdbW9KNuU1AuvMCBEHFiVVTTwmTyffEX0XY8NkzjBNtuw__"
+                  <Image
+                    src="/Livia_Bator.jpg"
                     className="h-[80px] w-[80px] rounded-full"
+                    width={500}
+                    height={500}
+                    alt="img"
                   />
 
                   <p className="flex justify-center mt-[15px] items-center font-[400] text-[16px] leading-[19.36px] text-[#232323]">
-                    Randy Press
+                    Livia Bator
                   </p>
                   <p className="flex justify-center mt-[5px] items-center font-[400] text-[15px] leading-[18.15px] text-[#718EBF]">
                     CEO
                   </p>
                 </div>
                 <div className="">
-                  <img
-                    alt="img"
-                    src="https://s3-alpha-sig.figma.com/img/4596/79f6/c0c1f4c69f7c2368440bfc85e940b511?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NnMWwqMlvgzofvdsgfueBg5HEJBEGMYnplfNmxLhb78BKVlkcDhBZz2OUYtZBrTYOtQpf04vbXEujbEkapjfGAdUIiJuaGeyKTAtxVO2dGwQlpr1ZaSp8j9EdolhAcUH4Y03zNAt8PlAjiUcMH4rEqCzcWbcxmVDXMqvNHBlI6GxFzoE4vpKvL26NVWa8NbNixT-G6j6bGrVwe4hWwWjgpP6G-duQm94aOCDb5cIqnylGY2L9LTNoNuWH5F19kHpyJxjrw~ghlnlB49dGFSiDicSWKfqKUiCHUnB~PDeZA1VmFm9grPb0xYseAvggLZ-mQnSYutZkQ1WZzfw7DoTFg__"
+                  <Image
+                    src="/RandyPress.jpg"
                     className="h-[80px] w-[80px] rounded-full"
+                    width={500}
+                    height={500}
+                    alt="img"
                   />
 
                   <p className="flex justify-center mt-[15px] items-center font-[400] text-[16px] leading-[19.36px] text-[#232323]">
@@ -394,10 +405,12 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="">
-                  <img
+                  <Image
+                    src="/Workman.jpg"
+                    className="h-[80px] w-[80px] rounded-full"
+                    width={500}
+                    height={500}
                     alt="img"
-                    src="https://s3-alpha-sig.figma.com/img/4ca5/afed/9b9f6f81c5acfb0ab11904a63a50981e?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cMmQKJYCTJRzwbAcdSevzPOyqMCe1fpkbHM~Ah8h~p1SYHUeaAC27T6Xu~B00iO1c3W3TmlHQyHUvYUCnpO34O6yIxsWYk9LDc81t7V-7i3ILeL5n6pVnqUDhlBhcLddZgiHM081sew7I2-HDRKROxR51oopChTmWs-DUSL7Csf-sltKl01n9vp0fc98~ZvVtfXUz3WLX6qC4ovqyfQu7wsCfOr9Rt4X6DjBVrouIhCJIAHnERsWaMGb1UB7fXY~if2pQMNJI2jkMsvOeH5bClWCLDIVMFWmcvSn-QEwtUSIjP-pJiIhZ8h1yhOO7mYfIFuWkLH6RackscUZNyF3tQ__"
-                    className="h-[80px] w-[80px] rounded-full "
                   />
 
                   <p className="flex justify-center  mt-[15px] items-center font-[400] text-[16px] leading-[19.36px] text-[#232323]">
